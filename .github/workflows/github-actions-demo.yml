@@ -1,5 +1,7 @@
-name: GitHub Actions Demo
-on: [push]
+name: Check-in / Check-out in my Woffu Account
+on:
+  schedule:
+    - cron:  '0-59 * * * *'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
