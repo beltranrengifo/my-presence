@@ -1,7 +1,7 @@
 name: Check-in / Check-out in my Woffu Account
 on:
   schedule:
-    - cron:  '0-59 * * * *'
+    - cron:  '* * * * *'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
