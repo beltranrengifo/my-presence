@@ -34,4 +34,3 @@ WoffuClient.post('/', WOFFU_CONFIG.data)
   .catch(error => {
     console.warn(error)
   })
-
