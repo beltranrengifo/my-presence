@@ -5,6 +5,13 @@ name: Handle Presence in my Woffu Account
 
 on: [push]
 
+runs-on: ${{ matrix.os }}
+
+strategy:
+  matrix:
+    os: [ubuntu-latest]
+    node: [14]
+
 jobs:
   toggle-presence:
     steps:
