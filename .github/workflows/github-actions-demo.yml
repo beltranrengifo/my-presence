@@ -3,7 +3,7 @@ on:
   schedule:
     - cron:  '* * * * *'
 jobs:
-  Toggle Presence:
+  toggle-presence:
     runs-on: ${{ matrix.os }}
 
     strategy:
