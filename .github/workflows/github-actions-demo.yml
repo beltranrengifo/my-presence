@@ -4,9 +4,15 @@ on:
     - cron:  '* * * * *'
 jobs:
   Toggle Presence:
-    runs-on: ubuntu-latest
-    env:
-      TOKEN: ${{ secrets.WOFFU_TOKEN }}
-      ID: ${{ secrets.WOFFU_USER_ID }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
     steps:
-      - run: curl https://liferay.woffu.com/api/svc/signs/signs -H 'Content-Type: application/json;charset=utf-8' -H 'Authorization: Bearer "%TOKEN%"' --data-raw '{"UserId":"%ID%","DeviceId":"WebApp"}'"
+      - name: Install dependencies
+        run: npm install
+      - name: Run script
+        run: npm run start

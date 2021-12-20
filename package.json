@@ -1,0 +1,16 @@
+{
+  "name": "gh-action-woffu",
+  "version": "1.0.0",
+  "description": "sign in-out helper",
+  "main": "index.js",
+  "repository": "https://github.com/beltranrengifo/gh-action-woffu.git",
+  "author": "Beltran Rengifo <beltran.rengifo@liferay.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
