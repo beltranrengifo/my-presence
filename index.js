@@ -19,9 +19,7 @@ const WoffuClient = http.create({
   headers: WOFFU_CONFIG.headers
 });
 
-console.log('hereeee')
-
-/* WoffuClient.post('/', WOFFU_CONFIG.data)
+WoffuClient.post('/', WOFFU_CONFIG.data)
   .then(({
     status,
     statusText,
@@ -37,4 +35,3 @@ console.log('hereeee')
     console.warn(error)
   })
 
- */
