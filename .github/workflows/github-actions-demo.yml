@@ -9,6 +9,8 @@ jobs:
   toggle-presence:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out Source Code
+        uses: actions/checkout@v2
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.5.0
         with:
