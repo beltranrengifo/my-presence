@@ -1,21 +1,18 @@
 name: Handle Presence in my Woffu Account
-on:
-  schedule:
-    - cron:  '* * * * *'
+# on:
+#   schedule:
+#     - cron:  '* * * * *'
+
+on: [push]
+
 jobs:
   toggle-presence:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
-
     steps:
-      - name: Install dependencies
+      - name: Install & Run
+        uses: actions/checkout@v2
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16'
         run: npm install
-        working-directory: gh-action-woffu
-
-      - name: Run script
         run: npm run start
         working-directory: gh-action-woffu
