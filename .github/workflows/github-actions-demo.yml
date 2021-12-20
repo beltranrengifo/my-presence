@@ -5,10 +5,9 @@ name: Handle Presence in my Woffu Account
 
 on: [push]
 
-runs-on: ubuntu-latest
-
 jobs:
   toggle-presence:
+    runs-on: ubuntu-latest
     steps:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.5.0
