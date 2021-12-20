@@ -13,6 +13,7 @@ jobs:
       - name: Install & Run
         with:
           node-version: '16'
-        run: npm install
-        run: npm run start
+      - run: npm install
+        working-directory: gh-action-woffu
+      - run: npm run start
         working-directory: gh-action-woffu
