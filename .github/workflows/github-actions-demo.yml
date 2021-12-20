@@ -15,7 +15,5 @@ jobs:
         uses: actions/setup-node@v2.5.0
       - name: Install
         run: npm install
-        working-directory: gh-action-woffu
       - name: Run
         run: npm run start
-        working-directory: gh-action-woffu
