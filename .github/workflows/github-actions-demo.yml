@@ -10,10 +10,11 @@ jobs:
     steps:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.5.0
-      - name: Install & Run
         with:
           node-version: '16'
-      - run: npm install
+      - name: Install
+        run: npm install
         working-directory: gh-action-woffu
-      - run: npm run start
+      - name: Run
+        run: npm run start
         working-directory: gh-action-woffu
