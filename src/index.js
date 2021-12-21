@@ -1,7 +1,9 @@
 const togglePresence = require('./toggle-presence')
 const sendEmail = require('./mailer')
 
-togglePresence()
+console.log(process.env)
+
+/* togglePresence()
   .then(({
     status,
     statusText,
@@ -32,4 +34,4 @@ togglePresence()
       'Request Error Status': status,
       'Request Error Status Text': statusText,
     })
-  })
+  }) */

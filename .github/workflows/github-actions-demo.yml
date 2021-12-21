@@ -1,22 +1,25 @@
 name: Handle Presence in my Woffu Account
 
-# on: [push]
+on: [push]
 
-on:
-  schedule:
-    # Mon to Thu
-    - cron:  '0 7 * * 1-4' # morning check-in
-    - cron:  '0 13 * * 1-4' # morning check-out
-    - cron:  '30 13 * * 1-4' # lunch check-in
-    - cron:  '0 16 * * 1-4' # finish day
-    # Fri
-    - cron:  '0 7 * * 5' # morning check-in
-    - cron:  '0 13 * * 5' # finish day
+# on:
+#   schedule:
+#     # Mon to Thu
+#     - cron:  '0 7 * * 1-4' # morning check-in
+#     - cron:  '0 13 * * 1-4' # morning check-out
+#     - cron:  '30 13 * * 1-4' # lunch check-in
+#     - cron:  '0 16 * * 1-4' # finish day
+#     # Fri
+#     - cron:  '0 7 * * 5' # morning check-in
+#     - cron:  '0 13 * * 5' # finish day
 
 jobs:
   toggle-presence:
     runs-on: ubuntu-latest
     steps:
+      env:
+        WOFFU_TOKEN: ${{ secrets.WOFFU_TOKEN }}
+        WOFFU_USER_ID: ${{ secrets.WOFFU_USER_ID }}
       - name: Checkout
         uses: actions/checkout@v2.4.0
       - name: Setup Node.js environment
@@ -24,4 +27,4 @@ jobs:
       - name: Install
         run: npm install
       - name: Run
-        run: npm run start
+        run: npm run start --token=${WOFFU_TOKEN} --user=${WOFFU_USER_ID}
