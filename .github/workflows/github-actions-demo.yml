@@ -5,13 +5,13 @@ name: Handle Presence in my Woffu Account
 on:
   schedule:
     # Mon to Thu
-    - cron:  '0 8 * * 1-4' # morning check-in
-    - cron:  '0 14 * * 1-4' # morning check-out
-    - cron:  '30 14 * * 1-4' # lunch check-in
-    - cron:  '0 17 * * 1-4' # finish day
+    - cron:  '0 7 * * 1-4' # morning check-in
+    - cron:  '0 13 * * 1-4' # morning check-out
+    - cron:  '30 13 * * 1-4' # lunch check-in
+    - cron:  '0 16 * * 1-4' # finish day
     # Fri
-    - cron:  '0 8 * * 5' # morning check-in
-    - cron:  '0 14 * * 5' # finish day
+    - cron:  '0 7 * * 5' # morning check-in
+    - cron:  '0 13 * * 5' # finish day
 
 jobs:
   toggle-presence:
