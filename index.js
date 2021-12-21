@@ -1,14 +1,14 @@
 const http = require('axios')
-// const { USER, TOKEN } = require('./secrets')
+const { USER, TOKEN } = require('./secrets')
 
 const WOFFU_CONFIG = {
   url: 'https://liferay.woffu.com/api/svc/signs/signs',
   data: {
-    UserId: process.env.user,
+    UserId: USER,
     DeviceId: 'WebApp'
   },
   headers: {
-    Authorization: `Bearer ${process.env.token}`,
+    Authorization: `Bearer ${TOKEN}`,
     'Content-Type': 'application/json;charset=utf-8'
   }
 }
@@ -31,6 +31,9 @@ WoffuClient.post('/', WOFFU_CONFIG.data)
       'Sign-in event Id': signEventId
     })
   })
-  .catch(error => {
-    console.warn(error)
+  .catch(({response}) => {
+    console.warn(
+      response.status,
+      response.statusText,
+    )
   })
