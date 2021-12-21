@@ -1,10 +1,10 @@
 const http = require('axios')
-const WOFFU_CONFIG = require('./config')
+const { headers, url } = require('./config')
 
 const WoffuClient = http.create({
-  baseURL: WOFFU_CONFIG.url,
+  baseURL: url,
   timeout: 3000,
-  headers: WOFFU_CONFIG.headers
+  headers: headers
 });
 
 module.export = WoffuClient

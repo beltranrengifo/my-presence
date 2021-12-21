@@ -1,6 +1,7 @@
 const WoffuClient = require('./api')
+const { data } = require('./config')
 
-WoffuClient.post('/', WOFFU_CONFIG.data)
+WoffuClient.post('/', data)
   .then(({
     status,
     statusText,
