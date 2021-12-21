@@ -11,6 +11,6 @@
     "axios": "^0.24.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node src/index.js"
   }
 }
