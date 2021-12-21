@@ -1,9 +1,7 @@
 const togglePresence = require('./toggle-presence')
 const sendEmail = require('./mailer')
 
-console.log({token: process.env.WOFFU_TOKEN, user: process.env.WOFFU_USER_ID})
-
-/* togglePresence()
+togglePresence()
   .then(({
     status,
     statusText,
@@ -34,4 +32,4 @@ console.log({token: process.env.WOFFU_TOKEN, user: process.env.WOFFU_USER_ID})
       'Request Error Status': status,
       'Request Error Status Text': statusText,
     })
-  }) */
+  })
