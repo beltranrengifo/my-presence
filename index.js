@@ -4,11 +4,11 @@ const http = require('axios')
 const WOFFU_CONFIG = {
   url: 'https://liferay.woffu.com/api/svc/signs/signs',
   data: {
-    UserId: process.env.WOFFU_USER_ID,
+    UserId: process.env.user,
     DeviceId: 'WebApp'
   },
   headers: {
-    Authorization: `Bearer ${process.env.WOFFU_TOKEN}`,
+    Authorization: `Bearer ${process.env.token}`,
     'Content-Type': 'application/json;charset=utf-8'
   }
 }
