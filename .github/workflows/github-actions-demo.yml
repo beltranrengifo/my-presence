@@ -16,10 +16,10 @@ on: [push]
 jobs:
   toggle-presence:
     runs-on: ubuntu-latest
+    env:
+      WOFFU_TOKEN: ${{ secrets.WOFFU_TOKEN }}
+      WOFFU_USER_ID: ${{ secrets.WOFFU_USER_ID }}
     steps:
-      env:
-        WOFFU_TOKEN: ${{ secrets.WOFFU_TOKEN }}
-        WOFFU_USER_ID: ${{ secrets.WOFFU_USER_ID }}
       - name: Checkout
         uses: actions/checkout@v2.4.0
       - name: Setup Node.js environment
