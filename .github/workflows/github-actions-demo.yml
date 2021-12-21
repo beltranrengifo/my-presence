@@ -19,6 +19,8 @@ jobs:
     env:
       WOFFU_TOKEN: ${{ secrets.WOFFU_TOKEN }}
       WOFFU_USER_ID: ${{ secrets.WOFFU_USER_ID }}
+      EMAIL: ${{ secrets.EMAIL }}
+      EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2.4.0

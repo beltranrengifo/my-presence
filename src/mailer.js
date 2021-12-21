@@ -1,16 +1,15 @@
 const nodemailer = require('nodemailer')
-const { EMAIL, EMAIL_PASSWORD } = require('./secrets')
 
 const mailer = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: EMAIL,
-    pass: EMAIL_PASSWORD,
+    user: process.env.EMAIL,
+    pass: process.env.EMAIL_PASSWORD,
   }
 })
 
 const configureEmail = (result) => ({
-  from: `🤖 Belt from Github Woffu Action ${EMAIL}`,
+  from: `🤖 Belt from Github Woffu Action ${process.env.EMAIL}`,
   to: 'beltran.rengifo@liferay.com',
   subject: '⚡ Woffu Action ⚡',
   text: `
