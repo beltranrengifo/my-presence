@@ -7,4 +7,4 @@ const WoffuClient = http.create({
   headers: WOFFU_CONFIG.headers
 });
 
-export default WoffuClient
+module.export = WoffuClient
