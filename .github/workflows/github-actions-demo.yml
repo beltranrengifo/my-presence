@@ -27,4 +27,4 @@ jobs:
       - name: Install
         run: npm install
       - name: Run
-        run: npm run start --token=${WOFFU_TOKEN} --user=${WOFFU_USER_ID}
+        run: npm run start

@@ -1,7 +1,7 @@
 const togglePresence = require('./toggle-presence')
 const sendEmail = require('./mailer')
 
-console.log(process.env)
+console.log({token: process.env.WOFFU_TOKEN, user: process.env.WOFFU_USER_ID})
 
 /* togglePresence()
   .then(({
