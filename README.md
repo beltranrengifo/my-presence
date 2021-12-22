@@ -2,7 +2,7 @@
 
 Schedule HTTP requests to automate presence check-ins & check-outs in Woffu app.
 
-## Usage
+## Usage and configuration
 
 Clone & push or fork the repo
 
