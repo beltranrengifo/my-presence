@@ -17,10 +17,14 @@ jobs:
   toggle-presence:
     runs-on: ubuntu-latest
     env:
-      WOFFU_TOKEN: ${{ secrets.WOFFU_TOKEN }}
-      WOFFU_USER_ID: ${{ secrets.WOFFU_USER_ID }}
       EMAIL: ${{ secrets.EMAIL }}
       EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+      EMAIL_SERVICE: ${{ secrets.EMAIL_SERVICE }}
+      RECIPIENT: ${{ secrets.RECIPIENT }}
+      USER_NAME: ${{ secrets.USER_NAME }}
+      WOFFU_ENDPOINT: ${{ secrets.WOFFU_ENDPOINT }}
+      WOFFU_TOKEN: ${{ secrets.WOFFU_TOKEN }}
+      WOFFU_USER_ID: ${{ secrets.WOFFU_USER_ID }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2.4.0

@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer')
 
 const mailer = nodemailer.createTransport({
-  service: 'gmail',
+  service: process.env.EMAIL_SERVICE,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.EMAIL_PASSWORD,
@@ -9,11 +9,11 @@ const mailer = nodemailer.createTransport({
 })
 
 const configureEmail = (result) => ({
-  from: `🤖 Belt from Github Woffu Action ${process.env.EMAIL}`,
-  to: 'beltran.rengifo@liferay.com',
+  from: `🤖 ${process.env.USER_NAME} from Github Woffu Action ${process.env.EMAIL}`,
+  to: process.env.RECIPIENT,
   subject: '⚡ Woffu Action ⚡',
   text: `
-    Hi Belt, you pirate!! 🏴‍☠️
+    Hi ${process.env.USER_NAME}, you pirate!! 🏴‍☠️
     Woffu action just happened, here's the result:
 
     👉 Request Status: ${result.status}

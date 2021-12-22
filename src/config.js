@@ -1,5 +1,5 @@
 const WOFFU_CONFIG = {
-  url: 'https://liferay.woffu.com/api/svc/signs/signs',
+  url: process.env.WOFFU_ENDPOINT,
   data: {
     UserId: process.env.WOFFU_USER_ID,
     DeviceId: 'WebApp'
