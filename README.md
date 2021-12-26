@@ -17,7 +17,7 @@ Visit `Settings > Secrets` section and complete the following **required** value
 - WOFFU_TOKEN: Your user token from Woffu. Inspect a request in your browser after login to get it
 - WOFFU_USER_ID: Your user id from Woffu. Inspect a request in your browser after login to get it
 
-Review & adjust the schedule settings in `.github/workflows/presence.yml`
+Review & adjust the schedule settings, if needed, in `.github/workflows/presence.yml`
 
 - Check [Crontab Guru](https://crontab.guru/) in case you need help with the cron configs.
 
