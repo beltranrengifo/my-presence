@@ -1,4 +1,4 @@
-const WoffuClient = require('./api')
+const WoffuClient = require('./http-client')
 const { data } = require('./config')
 
 const togglePresence = () => {
