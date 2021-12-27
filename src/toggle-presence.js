@@ -1,5 +1,5 @@
-const WoffuClient = require('./http-client')
-const { data } = require('./config')
+const { data, headers, url } = require('./config')
+const WoffuClient = require('./http-client')({ headers, url })
 
 const togglePresence = () => {
   return WoffuClient.post('/', data)

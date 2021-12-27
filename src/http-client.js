@@ -1,10 +1,13 @@
 const http = require('axios')
-const { headers, url } = require('./config')
 
-const HttpClient = http.create({
-  baseURL: url,
-  timeout: 3000,
-  headers: headers
-});
+const DEFAULT_TIMEOUT = 3000
+
+const HttpClient = ({ headers, url, timeout = DEFAULT_TIMEOUT }) => {
+  return http.create({
+    baseURL: url,
+    timeout,
+    headers: headers
+  })
+}
 
 module.exports = HttpClient
