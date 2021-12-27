@@ -5,7 +5,7 @@ const mailer = nodemailer.createTransport({
   auth: {
     user: process.env.EMAIL,
     pass: process.env.EMAIL_PASSWORD,
-  }
+  },
 })
 
 const configureEmail = (result) => ({
@@ -21,24 +21,23 @@ const configureEmail = (result) => ({
     👉 Sign-in event Id: ${result.signEventId}
 
     Have fun! 🤪
-  `
+  `,
 })
 
 const sendEmail = (result) => {
   mailer.sendMail(configureEmail(result), (error, info) => {
     if (error) {
-        console.log({
-          emailSuccess: false,
-          error,
-        })
-
+      console.log({
+        emailSuccess: false,
+        error,
+      })
     } else {
       console.log({
         emailSuccess: true,
         info,
       })
     }
-  });
+  })
 }
 
 module.exports = sendEmail
