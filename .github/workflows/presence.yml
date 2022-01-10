@@ -20,7 +20,7 @@ jobs:
       EMAIL: ${{ secrets.EMAIL }}
       EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
       EMAIL_SERVICE: ${{ secrets.EMAIL_SERVICE }}
-      RECIPIENT: ${{ secrets.RECIPIENT }}
+      RECIPIENTS: ${{ secrets.RECIPIENTS }}
       USER_NAME: ${{ secrets.USER_NAME }}
       WOFFU_ENDPOINT: ${{ secrets.WOFFU_ENDPOINT }}
       WOFFU_TOKEN: ${{ secrets.WOFFU_TOKEN }}
