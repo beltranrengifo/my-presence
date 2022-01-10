@@ -11,7 +11,7 @@ Visit `Settings > Secrets` section and complete the following **required** value
 - EMAIL: The sender email used for sending notifications, ie. `test@test.com`
 - EMAIL_PASSWORD: The password of the mentioned email, ie. `1234`
 - EMAIL_SERVICE: The service used, needed for Nodemailer config, ie. `gmail`
-- RECIPIENT: The email will receive the notifications, ie. `my-mail@test.com`
+- RECIPIENTS: The email/emails, separated by commas, will receive the notifications, ie. `my-mail@test.com, my-second-mail@test.com`
 - USER_NAME: Your name, used in the notifications, ie. `John Doe`
 - WOFFU_ENDPOINT: The URL the app should point to. Inspect a request in your browser doing a check-in to get it, ie. `https://liferay.woffu.com/api/svc/signs/signs`
 - WOFFU_TOKEN: Your user token from Woffu. Inspect a request in your browser after login to get it
