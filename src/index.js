@@ -1,13 +1,9 @@
 const togglePresence = require('./toggle-presence')
-const sendEmail = require('./mailer')
+const handleEmails = require('./mailer')
 
 togglePresence()
   .then(({ status, statusText, signEventId }) => {
-    sendEmail({
-      status,
-      statusText,
-      signEventId,
-    })
+    handleEmails({ status, statusText, signEventId })
 
     console.log({
       'Request Status': status,
@@ -16,7 +12,7 @@ togglePresence()
     })
   })
   .catch(({ status, statusText }) => {
-    sendEmail({
+    handleEmails({
       status,
       statusText,
     })

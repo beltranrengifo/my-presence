@@ -8,9 +8,9 @@ const mailer = nodemailer.createTransport({
   },
 })
 
-const configureEmail = (result) => ({
+const configureEmail = (result, to) => ({
   from: `🤖 ${process.env.USER_NAME} from Github Woffu Action ${process.env.EMAIL}`,
-  to: process.env.RECIPIENT,
+  to,
   subject: '⚡ Woffu Action ⚡',
   text: `
     Hi ${process.env.USER_NAME}, you pirate!! 🏴‍☠️
@@ -18,14 +18,14 @@ const configureEmail = (result) => ({
 
     👉 Request Status: ${result.status}
     👉 Request Status Text: ${result.statusText}
-    👉 Sign-in event Id: ${result.signEventId}
+    👉 Sign-in event Id: ${result.signEventId || 'NOT SUCCESSFUL :('}
 
     Have fun! 🤪
   `,
 })
 
-const sendEmail = (result) => {
-  mailer.sendMail(configureEmail(result), (error, info) => {
+const sendEmail = ({ result, to }) => {
+  mailer.sendMail(configureEmail(result, to), (error, info) => {
     if (error) {
       console.log({
         emailSuccess: false,
@@ -40,4 +40,12 @@ const sendEmail = (result) => {
   })
 }
 
-module.exports = sendEmail
+const handleEmails = (result) => {
+  const emails = process.env.RECIPIENTS.split(',').map((email) => email.trim())
+
+  emails.forEach((email) => {
+    sendEmail({ result, to: email })
+  })
+}
+
+module.exports = handleEmails
