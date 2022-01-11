@@ -22,3 +22,5 @@ Review & adjust the schedule settings, if needed, here: `.github/workflows/prese
 - Check [Crontab Guru](https://crontab.guru/) in case you need help with the cron configs.
 
 Modify the email content of the notification, if you will, here: `src/mailer.js`
+
+You can enable/disable the action in _Actions > Handle Presence in my Woffu Account_
