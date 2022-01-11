@@ -1,3 +1,5 @@
+[![Handle Presence in my Woffu Account](https://github.com/beltranrengifo/my-presence/actions/workflows/presence.yml/badge.svg?branch=main)](https://github.com/beltranrengifo/my-presence/actions/workflows/presence.yml)
+
 # My presence
 
 Schedule HTTP requests to automate presence check-ins & check-outs in Woffu app.
