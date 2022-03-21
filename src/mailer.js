@@ -11,14 +11,19 @@ const mailer = nodemailer.createTransport({
 const configureEmail = (result, to) => ({
   from: `🤖 ${process.env.USER_NAME} from Github Woffu Action ${process.env.EMAIL}`,
   to,
-  subject: '⚡ Woffu Action ⚡',
+  subject: `⚡ Woffu Action ⚡${
+    !result.signEventId ? ' | NOT SUCCESSFUL :(' : ''
+  }`,
   text: `
     Hi ${process.env.USER_NAME}, you pirate!! 🏴‍☠️
     Woffu action just happened, here's the result:
 
+    ${!result.signEventId && '🚨 ACTION NOT SUCCESSFUL 🚨'}
     👉 Request Status: ${result.status}
     👉 Request Status Text: ${result.statusText}
-    👉 Sign-in event Id: ${result.signEventId || 'NOT SUCCESSFUL :('}
+    👉 Sign-in event Id: ${
+      result.signEventId || 'Sign-in event NOT SUCCESSFUL :('
+    }
 
     Have fun! 🤪
   `,
