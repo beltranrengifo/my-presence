@@ -19,6 +19,7 @@ const configureEmail = (result, to) => ({
     Woffu action just happened, here's the result:
 
     ${!result.signEventId && '🚨 ACTION NOT SUCCESSFUL 🚨'}
+
     👉 Request Status: ${result.status}
     👉 Request Status Text: ${result.statusText}
     👉 Sign-in event Id: ${
