@@ -26,3 +26,9 @@ Review & adjust the schedule settings, if needed, here: `.github/workflows/prese
 Modify the email content of the notification, if you will, here: `src/mailer.js`
 
 You can enable/disable the action in _Actions > Handle Presence in my Woffu Account_
+
+## Limitations
+
+Github Actions Schedule is not so accurate as it should, expect some random time variations on the triggers.
+
+Github Actions still does not support timezones, we have to manually take care of this, once per year.
