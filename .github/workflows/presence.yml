@@ -6,23 +6,23 @@ on:
   schedule:
     # WINTER TIME
     # Mon to Thu
-    # - cron: '45 6 * * 1-4' # morning check-in
-    # - cron: '0 13 * * 1-4' # morning check-out
-    # - cron: '30 13 * * 1-4' # lunch check-in
-    # - cron: '0 16 * * 1-4' # finish day
+    # - cron: '55 6 * * 1-4' # morning check-in
+    # - cron: '56 12 * * 1-4' # morning check-out
+    # - cron: '34 13 * * 1-4' # lunch check-in
+    # - cron: '56 15 * * 1-4' # finish day
     # Fri
-    # - cron: '0 7 * * 5' # morning check-in
-    # - cron: '0 13 * * 5' # finish day
+    # - cron: '02 7 * * 5' # morning check-in
+    # - cron: '58 12 * * 5' # finish day
 
     # SUMMER TIME
     # Mon to Thu
-    - cron: '45 5 * * 1-4' # morning check-in
-    - cron: '0 12 * * 1-4' # morning check-out
-    - cron: '30 12 * * 1-4' # lunch check-in
-    - cron: '0 15 * * 1-4' # finish day
+    - cron: '55 5 * * 1-4' # morning check-in
+    - cron: '56 11 * * 1-4' # morning check-out
+    - cron: '34 12 * * 1-4' # lunch check-in
+    - cron: '56 14 * * 1-4' # finish day
     # Fri
-    - cron: '0 6 * * 5' # morning check-in
-    - cron: '0 12 * * 5' # finish day
+    - cron: '02 6 * * 5' # morning check-in
+    - cron: '58 11 * * 5' # finish day
 
 jobs:
   toggle-presence:
